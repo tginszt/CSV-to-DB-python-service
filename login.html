@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Read CSV!</title>
+    <style>
+        form {
+            text-align: center;
+            padding: 30px;
+        }
+        input{
+            margin: 8px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>View data from your CSV datasets</h1>
+
+    <form method="post" target="main.py">
+
+        <h2>Upload your CSV dataset</h2>
+        <input type="file" name="dataset"> <br><br>
+
+        <h2>Choose operation type</h2>
+        <input type="radio" name="selectType" value="select" checked> <label>SELECT</label><br>
+        <input type="radio" name="selectType" value="selectWhere"> <label>SELECT with condition</label><br><br>
+
+        <h2>Choose what you want to see</h2>
+        <label>Items to select (eg. id, name, surname):</label><br>
+        <input type="text" name="queryitems"><br>
+        <label>Table name:</label><br>
+        <input type="text" name="querytable"><br>
+        <label>Condition (WHERE):</label><br>
+        <input type="text" name="querycondition"><br>
+
+        <input type="submit" value="run">
+    </form>
+</body>
+</html>

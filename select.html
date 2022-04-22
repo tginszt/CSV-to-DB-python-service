@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Read CSV!</title>
+    <style>
+        form {
+            text-align: center;
+            padding: 30px;
+        }
+        input{
+            margin: 8px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
+    <h1>Read data from your CSV file!</h1>
+    <h2>You can also download created .db file <a href="local.db" download>here</a></h2>
 
+    <form method="post" target="main.py">
+
+        <h2>Choose operation type</h2>
+        <input type="radio" name="queryType" value="select" checked> <label>SELECT</label><br>
+        <input type="radio" name="queryType" value="selectWhere"> <label>SELECT with condition</label><br>
+        <input type="radio" name="queryType" value="ownQuery"> <label>Write your own query</label><br><br>
+
+        <h2>Choose what you want to see</h2>
+        <label>Items to select (eg. id, name, surname):</label><br>
+        <input type="text" name="queryItems"><br>
+        <label>Condition (WHERE):</label><br>
+        <input type="text" name="queryCondition"><br>
+        <label>Your own query (default table name: CSV):</label><br>
+        <input type="text" name="queryOwn"><br>
+
+        <input type="submit" value="run">
+    </form>
 </body>
 </html>

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Read CSV!</title>
     <style>
+        body{
+            background: teal;
+        }
         form {
             text-align: center;
             padding: 30px;
@@ -18,7 +21,14 @@
     </style>
 </head>
 <body>
-    <h1>Describe data types of your CSV columns</h1>
-    <h2>Example correct datatypes: VARCHAR(size), INTEGER(size), FLOAT(size,d), BOOLEAN, DATE, YEAR</h2>
+    <h1>View data from your CSV datasets</h1>
+
+    <form method="post" action="/getdatatypes">
+
+        <h2>Upload your CSV dataset</h2>
+        <input type="file" name="dataset"> <br><br>
+
+        <input type="submit" value="upload">
+    </form>
 </body>
 </html>
